@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/imac/Documents/isima/ZZ3/cpp/tp_1/src/main_point.cpp
+vector
+-
+cartesien.hpp
+-
+polaire.hpp
+-
+nuage.hpp
+-
+
+/Users/imac/Documents/isima/ZZ3/cpp/tp_1/src/nuage.cpp
+nuage.hpp
+-
+
+src/cartesien.hpp
+point.hpp
+-
+
+src/nuage.hpp
+vector
+-
+cartesien.hpp
+-
+polaire.hpp
+-
+
+src/point.hpp
+iostream
+-
+
+src/polaire.hpp
+point.hpp
+-
+
