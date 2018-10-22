@@ -49,15 +49,21 @@ class BarycentrePolaire {
 };
 
 //----------------------------------------------------------------------------------------Barycentre
+
+
 template<typename T>
-Cartesien barycentre(const Nuage<T> & nuage) {
+T barycentre_v1(const Nuage<T> & nuage) {
+ if (nuage.size()==0){
+   return Cartesien(0.0,0.0);
+  }
  Cartesien c;
  double x = 0.0;
  double y = 0.0;
  int n = 0;
 
  for (typename Nuage<T>::const_iterator i = nuage.begin(); i<nuage.end(); ++i) {
-  (*i)->convertir(c);
+    //avant de convertir verifier le type
+  i->convertir(c);
   x+=c.getX();
   y+=c.getY();
   ++n;

@@ -30,8 +30,7 @@ void Cartesien::convertir(Polaire & polaire) const {
  double angle;
 
  if (distance==0) angle=0;
-
- if (x_==0) {
+ else if (x_==0) {
   if (y_<0) angle=-PI;
   else angle=PI;
  }
