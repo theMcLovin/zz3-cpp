@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_027f5/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_027f5.dir/build.make CMakeFiles/cmTC_027f5.dir/build
+gmake[1] : on entre dans le répertoire « /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_027f5.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_027f5.dir/CheckSymbolExists.c.o   -c /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_027f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_027f5.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_027f5.dir/CheckSymbolExists.c.o  -o cmTC_027f5 
+CMakeFiles/cmTC_027f5.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_027f5.dir/build.make:97 : la recette pour la cible « cmTC_027f5 » a échouée
+gmake[1]: *** [cmTC_027f5] Erreur 1
+gmake[1] : on quitte le répertoire « /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_027f5/fast » a échouée
+gmake: *** [cmTC_027f5/fast] Erreur 2
+
+File /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_24bde/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_24bde.dir/build.make CMakeFiles/cmTC_24bde.dir/build
+gmake[1] : on entre dans le répertoire « /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_24bde.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_24bde.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_24bde
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24bde.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_24bde.dir/CheckFunctionExists.c.o  -o cmTC_24bde -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_24bde.dir/build.make:97 : la recette pour la cible « cmTC_24bde » a échouée
+gmake[1]: *** [cmTC_24bde] Erreur 1
+gmake[1] : on quitte le répertoire « /home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_24bde/fast » a échouée
+gmake: *** [cmTC_24bde/fast] Erreur 2
+
+

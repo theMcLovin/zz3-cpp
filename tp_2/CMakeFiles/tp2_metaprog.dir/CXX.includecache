@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/src/cartesien.cpp
+cmath
+-
+cartesien.hpp
+-
+polaire.hpp
+-
+
+/home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/src/main_metaprog.cpp
+cstdlib
+-
+
+/home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/src/point.cpp
+point.hpp
+-
+
+/home/LOCAL.ISIMA.FR/roboidevez/cpp/ZZ3-cpp/tp_2/src/polaire.cpp
+cmath
+-
+cartesien.hpp
+-
+polaire.hpp
+-
+
+src/cartesien.hpp
+point.hpp
+-
+
+src/point.hpp
+iostream
+-
+
+src/polaire.hpp
+point.hpp
+-
+
