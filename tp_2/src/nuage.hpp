@@ -33,8 +33,7 @@ class Nuage {
  public: typename std::vector<T>::iterator begin() { return points_.begin(); }
  public: typename std::vector<T>::iterator end() { return points_.end(); }
  //-------------------------------------------------------------------------------Methodes publiques
- public: void ajouter(T * t) { points_.push_back(t); }
- public: void ajouter(T & t) { points_.push_back(&t); }
+ public: void ajouter(const T & t) { points_.push_back(t); }
 };
 
 // Classe  B a r y c e n t r e C a r t e s i e n //-------------------------------------------------
