@@ -51,6 +51,8 @@ class BarycentrePolaire {
 //----------------------------------------------------------------------------------------Barycentre
 
 
+
+
 template<typename T>
 T barycentre_v1(const Nuage<T> & nuage) {
  if (nuage.size()==0){
@@ -59,10 +61,9 @@ T barycentre_v1(const Nuage<T> & nuage) {
  Cartesien c;
  double x = 0.0;
  double y = 0.0;
- int n = 0;
+ int n = 0.0;
 
  for (typename Nuage<T>::const_iterator i = nuage.begin(); i<nuage.end(); ++i) {
-    //avant de convertir verifier le type
   i->convertir(c);
   x+=c.getX();
   y+=c.getY();
@@ -71,6 +72,29 @@ T barycentre_v1(const Nuage<T> & nuage) {
 
  return Cartesien(x/n,y/n);
 }
+
+//spécialisation pour le test 4b, besoin de commenter le test 4a
+//doit être déclarer après barycentre_v1 templatée
+template<> Polaire barycentre_v1(const Nuage<Polaire> & nuage){
+//T barycentre_v1(const Nuage<T> & nuage) {
+ if (nuage.size()==0){
+   return Polaire(0.0,0.0);
+  }
+ Polaire p;
+ double a = 0.0;
+ double d = 0.0;
+ int n = 0.0;
+
+ for (Nuage<Polaire>::const_iterator i = nuage.begin(); i<nuage.end(); ++i) {
+  i->convertir(p);
+  a+=p.getAngle();
+  d+=p.getDistance();
+  ++n;
+ }
+
+ return Polaire(a/n,d/n);
+}
+
 
 
 // Fin //-------------------------------------------------------------------------------------------

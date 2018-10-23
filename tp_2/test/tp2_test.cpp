@@ -85,7 +85,7 @@ TEST_CASE ( "TP2_Nuage::BarycentreCartesien_V1" ) {
  REQUIRE ( b3.getY() == Approx((p1.getY()+p2.getY()+p3.getY()+p4.getY())/4) );
 }
 
-//----------------------------------------------------------------------------------------------- 4a
+/*//----------------------------------------------------------------------------------------------- 4a
 TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
  Nuage<Polaire> n;
 
@@ -114,10 +114,10 @@ TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
 
  REQUIRE ( b3.getAngle() == Approx(43.017260).epsilon(1e-3) );
  REQUIRE ( b3.getDistance() == Approx(42.159772).epsilon(1e-3) );
-}
+}*/
 
 //----------------------------------------------------------------------------------------------- 4b
-/*TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
+TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V2" ) {
  Nuage<Polaire> n;
 
  Polaire p1(12,34);
@@ -142,13 +142,15 @@ TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
  n.ajouter(p4);
 
  Polaire b3 = barycentre_v1(n);
+ std::cout << "val:" << p1.getAngle()<<std::endl;
+ std::cout << "val:" << p2.getAngle()<<std::endl;
+ std::cout << "val:" << p3.getAngle()<<std::endl;
+ std::cout << "val:" << p4.getAngle()<<std::endl;
+ REQUIRE ( b3.getAngle() == Approx((p1.getAngle()+p2.getAngle()+p3.getAngle()+p4.getAngle())/4.0) );
 
- REQUIRE ( b3.getAngle() == Approx((p1.getAngle()+p2.getAngle()
-                                   +p3.getAngle()+p4.getAngle())/4) );
+ REQUIRE ( b3.getDistance() == Approx((p1.getDistance()+p2.getDistance()+p3.getDistance()+p4.getDistance())/4.0) );
 
- REQUIRE ( b3.getDistance() == Approx((p1.getDistance()+p2.getDistance()
-                                      +p3.getDistance()+p4.getDistance())/4) );
-}*/
+}
 
 //------------------------------------------------------------------------------------------------ 5
 /*TEST_CASE ( "TP2_Nuage::BarycentreCartesien_V2" ) {
