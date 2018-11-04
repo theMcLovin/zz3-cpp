@@ -16,6 +16,32 @@ class Echantillon {
    Echantillon(){}
    unsigned getTaille(){return ech.size();}
    void ajouter(double v){ech.push_back(v);}
+   vector<Valeur>::iterator begin(){
+	   	return ech.begin();
+   }
+   vector<Valeur>::iterator end(){
+	   	return ech.end();
+   }
+
+   Valeur getMinimum(){
+   	Valeur min = *(this->begin());
+   	for (std::vector<Valeur>::iterator i = this->begin(); i != this->end(); ++i){
+   		if (i->getNombre() < min.getNombre()){
+   			min = *i;
+   		}
+   	}
+   	return min;
+   }
+
+   Valeur getMaximum(){
+   	Valeur max = *(this->begin());
+   	for (std::vector<Valeur>::iterator i = this->begin(); i != this->end(); ++i){
+   		if (i->getNombre() > max.getNombre()){
+   			max = *i;
+   		}
+   	}
+   	return max;
+   }
 
 };
 
