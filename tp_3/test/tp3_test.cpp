@@ -2,7 +2,7 @@
 #include "catch.hpp"
 
 #include <cmath>
-#include "echantillon.hpp"
+#include "classe.hpp"
 
 //#include <histogramme.hpp>
 //#include <comparateur_quantite.hpp>
@@ -133,7 +133,7 @@ TEST_CASE ( "TP3_Echantillon::Indice" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 10
-/*TEST_CASE ( "TP3_Classe::Constructeur" ) {
+TEST_CASE ( "TP3_Classe::Constructeur" ) {
  const double a = 12.0;
  const double b = 24.0;
 
@@ -142,10 +142,10 @@ TEST_CASE ( "TP3_Echantillon::Indice" ) {
  REQUIRE ( c.getBorneInf() == Approx(a) );
  REQUIRE ( c.getBorneSup() == Approx(b) );
  REQUIRE ( c.getQuantite() == 0u );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 11
-/*TEST_CASE ( "TP3_Classe::Accesseurs" ) {
+TEST_CASE ( "TP3_Classe::Accesseurs" ) {
  const double   a = 12.0;
  const double   b = 24.0;
  const unsigned n = 7;
@@ -163,7 +163,7 @@ TEST_CASE ( "TP3_Echantillon::Indice" ) {
  c.ajouter();
 
  REQUIRE ( c.getQuantite() == n+1 );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 12
 /*TEST_CASE ( "TP3_Histogramme::Constructeur" ) {
