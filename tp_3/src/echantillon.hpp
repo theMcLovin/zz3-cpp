@@ -24,6 +24,9 @@ class Echantillon {
    }
 
    Valeur getMinimum(){
+   	if (this->begin()==this->end()){
+   		throw std::domain_error("Echantillon is empty");
+   	}
    	Valeur min = *(this->begin());
    	for (std::vector<Valeur>::iterator i = this->begin(); i != this->end(); ++i){
    		if (i->getNombre() < min.getNombre()){
@@ -34,6 +37,9 @@ class Echantillon {
    }
 
    Valeur getMaximum(){
+   	if (this->begin()==this->end()){
+   		throw std::domain_error("Echantillon is empty");
+   	}
    	Valeur max = *(this->begin());
    	for (std::vector<Valeur>::iterator i = this->begin(); i != this->end(); ++i){
    		if (i->getNombre() > max.getNombre()){
