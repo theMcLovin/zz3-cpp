@@ -37,7 +37,7 @@ set ( ZZ3_HEADERS
       src/classe.hpp
       #src/comparateur_quantite.hpp
       src/echantillon.hpp
-      #src/histogramme.hpp
+      src/histo.hpp
       src/valeur.hpp
     )
 

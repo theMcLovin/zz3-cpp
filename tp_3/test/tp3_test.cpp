@@ -2,7 +2,7 @@
 #include "catch.hpp"
 
 #include <cmath>
-#include "classe.hpp"
+#include "histo.hpp"
 
 //#include <histogramme.hpp>
 //#include <comparateur_quantite.hpp>
@@ -174,6 +174,7 @@ TEST_CASE ( "TP3_Classe::Accesseurs" ) {
  double bornesInf[] = { 5.0, 7.0,  9.0, 11.0, 13.0 };
  double bornesSup[] = { 7.0, 9.0, 11.0, 13.0, 15.0 };
 
+ //PB ICI
  Histo::classes_t::const_iterator it = h.getClasses().begin();
  unsigned                         i  = 0;
 

@@ -10,8 +10,7 @@ class Classe{
 		double bornSup;
 		unsigned int qte;
 	public:
-		Classe(double bi = 0,
-		double bs = 0){bornInf=bi; bornSup=bs; qte=0;}
+		Classe(double bi = 0, double bs = 0){bornInf=bi; bornSup=bs; qte=0;}
 		double getBorneInf(){return bornInf;}	
 		double getBorneSup(){return bornSup;}	
 		unsigned int getQuantite(){return qte;}
