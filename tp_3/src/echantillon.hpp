@@ -49,6 +49,18 @@ class Echantillon {
    	return max;
    }
 
+   Valeur getValeur(int i){
+   	try{
+   		//operator [] doesnt perform bound check
+   		return ech.at(i);
+   	}
+   	catch (std::out_of_range){
+   		cout << "I CATCH!! (for fun)" <<endl;
+
+   		throw std::out_of_range("This element doesn't exist");
+   	}
+   }
+
 };
 
 #endif
