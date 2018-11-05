@@ -18,7 +18,6 @@ class Classe{
 		void setBorneSup(double bs){bornSup=bs;}
 		void setQuantite(unsigned q){qte=q;}
 		void ajouter(){++qte;}
-
 };
 
 #endif
