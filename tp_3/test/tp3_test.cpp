@@ -166,7 +166,7 @@ TEST_CASE ( "TP3_Classe::Accesseurs" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 12
-/*TEST_CASE ( "TP3_Histogramme::Constructeur" ) {
+TEST_CASE ( "TP3_Histogramme::Constructeur" ) {
  Histo h(5.0,15.0,5);
 
  REQUIRE ( h.getClasses().size() == 5u );
@@ -174,7 +174,7 @@ TEST_CASE ( "TP3_Classe::Accesseurs" ) {
  double bornesInf[] = { 5.0, 7.0,  9.0, 11.0, 13.0 };
  double bornesSup[] = { 7.0, 9.0, 11.0, 13.0, 15.0 };
 
- //PB ICI
+ //il faut definir un type classes_t qui correspond à vec<classe>
  Histo::classes_t::const_iterator it = h.getClasses().begin();
  unsigned                         i  = 0;
 
@@ -185,7 +185,7 @@ TEST_CASE ( "TP3_Classe::Accesseurs" ) {
   ++it;
   ++i;
  }
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 13
 /*TEST_CASE ( "TP3_Histogramme::Echantillon" ) {
