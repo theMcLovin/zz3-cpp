@@ -1,0 +1,6 @@
+/CMakeFiles/*
+/tp1/CMakeFiles/*
+.DS_Store
+CMakeCache.txt
+tp1/CMakeCache.txt
+MakeFile
