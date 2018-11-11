@@ -33,4 +33,17 @@ Cartesien barycentre(Nuage n){
 	Cartesien c(sizeX/cnt, sizeY/cnt);
 	return c;
 }
+
+
+class BarycentreCartesien{
+	public:
+		Cartesien operator()(Nuage &
+			n){return barycentre(n);}
+};
+
+class BarycentrePolaire{
+	public:
+		Polaire operator()(Nuage &n){Cartesien c = barycentre(n); Polaire p; c.convertir(p); return p;}
+};
+
 #endif
