@@ -4,9 +4,9 @@
 
 #include "classe.hpp"
 
-class Histo{
+class Histogramme{
 public:
-	Histo(double bi, double bs, int size){
+	Histogramme(double bi, double bs, int size){
         his.reserve(size);
         int step = (bs-bi)/size;
         for (int i=0; i<size; ++i){

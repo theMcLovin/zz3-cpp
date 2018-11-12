@@ -7,7 +7,7 @@
 //#include <histogramme.hpp>
 //#include <comparateur_quantite.hpp>
 
-//typedef Histogramme Histo;
+typedef Histogramme Histo;
 //typedef Histogramme<> Histo;
 
 // Tests //-----------------------------------------------------------------------------------------
