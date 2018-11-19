@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+0ab48ce7d54751a358ef151e196f60c4 CMakeFiles/tp6_autogen
+90b66b441b95338236849dd76251c46a qrc_cards.cpp
