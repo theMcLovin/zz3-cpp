@@ -11,14 +11,13 @@ class Classe{
 		unsigned int qte;
 	public:
 		Classe(double bi = 0, double bs = 0){bornInf=bi; bornSup=bs; qte=0;}
-		double getBorneInf(){return bornInf;}	
-		double getBorneSup(){return bornSup;}	
-		unsigned int getQuantite(){return qte;}
-		void setBorneInf(double bi){bornInf=bi;}	
-		void setBorneSup(double bs){bornSup=bs;}	
-		void setQuantite(unsigned q){qte=q;}	
-		void ajouter(){++qte;}	
-
+		const double getBorneInf() const{return bornInf;}
+		const double getBorneSup() const{return bornSup;}
+		const unsigned int getQuantite() const{return qte;}
+		void setBorneInf(double bi){bornInf=bi;}
+		void setBorneSup(double bs){bornSup=bs;}
+		void setQuantite(unsigned q){qte=q;}
+		void ajouter(){++qte;}
 };
 
 #endif
